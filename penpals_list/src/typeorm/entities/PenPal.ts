@@ -1,5 +1,11 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
+/**
+ * questa classe rappresenta una tabella all'interno del db
+ * (la quale configurazione di connessione è specificata nel file app.module)
+ * le proprietà rappresentano le colonne della tabella
+ */
+
 @Entity()
 export class PenPal {
 

@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PenPal } from './typeorm/entities/PenPal';
+import { PenpalsModule } from './penpals/penpals.module';
 
 @Module({
     imports: [TypeOrmModule.forRoot({
@@ -14,7 +15,7 @@ import { PenPal } from './typeorm/entities/PenPal';
         database: 'corrispondenza_nest',
         entities: [PenPal],
         synchronize: true,
-      }), 
+      }), PenpalsModule, 
      ],
   controllers: [AppController],
   providers: [AppService],

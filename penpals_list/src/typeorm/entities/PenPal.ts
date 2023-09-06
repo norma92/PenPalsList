@@ -15,6 +15,6 @@ export class PenPal {
     @Column({ nullable: true })
     compleanno: Date;
 
-    @Column()
+    @Column({ nullable: true, default: 0 })
     affinita: number;
 }
